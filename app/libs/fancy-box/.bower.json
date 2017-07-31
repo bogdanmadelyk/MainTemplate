@@ -1,0 +1,37 @@
+{
+  "name": "fancy-box",
+  "version": "0.0.1",
+  "authors": [
+    "Andrés Sánchez"
+  ],
+  "description": "A Polymer element to create a box with a logo, text and options.",
+  "keywords": [
+    "Polymer",
+    "web-components",
+    "fancy-box"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andressanchez/fancy-box",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.3",
+    "core-icon-button": "Polymer/core-icon-button#~0.3.3",
+    "fontawesome-icon": "~0.0.2"
+  },
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "40c0c30ce8f322c123865d16bb0772c1f91d33af"
+  },
+  "_source": "https://github.com/andressanchez/fancy-box.git",
+  "_target": "^0.0.1",
+  "_originalSource": "fancy-box",
+  "_direct": true
+}
