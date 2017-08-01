@@ -3,46 +3,10 @@
 @import "fonts";
 @import "libs";
 @import "vars";
+@import "components/_typography.scss";
+@import "components/_base.scss";
 
-*::-webkit-input-placeholder{
-	color: #666;
-	opacity: 1;
-}
 
-*:-moz-placeholder{
-	color: #666;
-	opacity: 1;
-}
 
-*::-moz-placeholder{
-	color: #666;
-	opacity: 1;
-}
 
-*:-ms-input-placeholder{
-	color: #666;
-	opacity: 1;
-}
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid{
-	color: #666;
-}
-body input:required:valid,
-body textarea:required:valid{
-	color: #666;
-}
-
-html, body{
-	height: 100%;
-}
-
-body{
-	font-size: 16px;
-	min-width: 300px;
-	position: relative;
-	font-family: $default-font;
-	line-height: 1.75;
-	overflow-x: hidden;
-	opacity: 1;
-}
