@@ -32,10 +32,22 @@ gulp.task('js', ['common-js'], function() {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
 
+        // MODAL WINDOW
+        'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
+        'app/libs/Magnific-Popup-master/src/js/ajax.js',
+        'app/libs/Magnific-Popup-master/src/js/core.js',
+        'app/libs/Magnific-Popup-master/src/js/gallery.js',
+        'app/libs/Magnific-Popup-master/src/js/iframe.js',
+        'app/libs/Magnific-Popup-master/src/js/image.js',
+        'app/libs/Magnific-Popup-master/src/js/inline.js',
+        'app/libs/Magnific-Popup-master/src/js/retina.js',
+        'app/libs/Magnific-Popup-master/src/js/zoom.js',
+
+        
         'app/js/common.min.js',
         ])
     .pipe(concat('scripts.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream: true}));
 });

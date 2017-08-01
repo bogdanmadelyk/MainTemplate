@@ -1,0 +1,86 @@
+<!-- http://dimsemenov.com/plugins/magnific-popup/documentation.html  -->
+
+<!-- 
+	1) Inline Popup. 
+-->
+<!-- Button -->
+<a href="#test-popup" class="open-popup-link">Show inline popup</a>
+<!-- Modal Window -->
+<div id="test-popup" class="white-popup mfp-hide">
+  <fieldset>
+    <legend>Login data</legend>
+    <div class="form-item">
+        <label>Email</label>
+        <input type="email" name="user-email" class="w50">
+    </div>
+    <div class="form-item">
+        <label>Password</label>
+        <input type="password" name="user-password" class="w50">
+    </div>
+</fieldset>
+</div>
+
+<script>
+	$('.open-popup-link').magnificPopup({
+		type: 'inline',
+		midClick: true 
+	});
+</script>
+<style>
+	/*Styles for popup*/
+	.white-popup {
+		position: relative;
+		background: #FFF;
+		padding: 20px;
+		width: auto;
+		max-width: 500px;
+		margin: 20px auto;
+	}
+</style>
+
+<!-- 
+	2) Gallery Popup.
+ -->
+
+ <div class="gallery">
+    <a href="img/preview.jpg">Open image 1 (gallery #1)</a>
+    <a href="img/preview.jpg">Open image 2 (gallery #1)</a>
+</div>
+
+<script>
+	$('.gallery').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			gallery: {
+				enabled: true
+			},
+			removalDelay: 300,
+			mainClass: 'mfp-fade'
+
+		});
+	});
+</script>
+<style>
+	/*Styles for aniamtion*/
+	.mfp-fade.mfp-bg {
+		opacity: 0;
+		transition: all 0.15s ease-out;
+	}
+	.mfp-fade.mfp-bg.mfp-ready {
+		opacity: 0.8;
+	}
+	.mfp-fade.mfp-bg.mfp-removing {
+		opacity: 0;
+	}
+	.mfp-fade.mfp-wrap .mfp-content {
+		opacity: 0;
+		transition: all 0.15s ease-out;
+	}
+	.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+		opacity: 1;
+	}
+	.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+		opacity: 0;
+	}
+</style>
