@@ -16,10 +16,18 @@ input,
 textarea,
 select {
 	display: block;
+	width: 100%;
 	font-family: inherit;
 	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	font-family: $default-font;
 	outline: none;
-	vertical-align: middle;
+	vertical-align: top;
+	color: $input-color;
+	transition: $default-transition;
+	border-radius: $input-border-radius;
+	border: 1px solid $input-color;
 }
 // States
 input,
@@ -27,6 +35,8 @@ textarea,
 select {
     &:focus {
     	outline: none;
+    	color: $input-color-focus;
+    	border: 1px solid $input-color-focus;
     }
     &:disabled,
     &.disabled {
