@@ -34,15 +34,9 @@ gulp.task('js', ['common-js'], function() {
 
         // MODAL WINDOW
         'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
-        'app/libs/Magnific-Popup-master/src/js/ajax.js',
-        'app/libs/Magnific-Popup-master/src/js/core.js',
-        'app/libs/Magnific-Popup-master/src/js/gallery.js',
-        'app/libs/Magnific-Popup-master/src/js/iframe.js',
-        'app/libs/Magnific-Popup-master/src/js/image.js',
-        'app/libs/Magnific-Popup-master/src/js/inline.js',
-        'app/libs/Magnific-Popup-master/src/js/retina.js',
-        'app/libs/Magnific-Popup-master/src/js/zoom.js',
 
+        // SLIDER
+        'app/libs/slider-pro-master/dist/js/jquery.sliderPro.min.js',
         
         'app/js/common.min.js',
         ])

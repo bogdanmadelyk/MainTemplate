@@ -1,11 +1,6 @@
-@import "base/reset";
-@import "_mixins/mixins";
-@import "base/fonts";
-@import "base/libs";
-@import "base/vars";
-@import "base/typography";
-@import "base/base";
-
+.slider-pro {
+    font-family: 'Open Sans', Arial;
+}
 
 /* Example 1 */
 
