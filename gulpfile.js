@@ -36,7 +36,8 @@ gulp.task('js', ['common-js'], function() {
         'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
 
         // SLIDER
-        'app/libs/slider-pro-master/dist/js/jquery.sliderPro.min.js',
+        'app/libs/slick-carousel/slick/slick.min.js',
+        'app/libs/bxslider-4/dist/vendor/jquery.easing.1.3.js',
         
         'app/js/common.min.js',
         ])

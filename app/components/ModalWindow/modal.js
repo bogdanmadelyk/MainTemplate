@@ -1,3 +1,6 @@
+$(function(){
+
+
 // INLINE TYPE
 $('.open-popup-link').magnificPopup({
 	removalDelay: 300, // Delay before popup is removed
@@ -15,4 +18,5 @@ $('.gallery').each(function() {
 		removalDelay: 300, // Delay before popup is removed 
 		mainClass: 'mfp-fade', // Fade animation
 	});
+});
 });
