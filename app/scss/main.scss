@@ -6,9 +6,48 @@
 @import "base/typography";
 @import "base/base";
 
-.slick-slide img{
+
+.slider{
+	padding: 0 60px;
+}
+.slider-img{
 	width: 100%;
 }
-.bx-viewport{
-	height: auto!important;
+.slider-arrow{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 32px;
+	height: 32px;
+	z-index: 100;
+	&:hover{
+		cursor: pointer
+	}
+}
+.slider-arrow-next{
+	right: 15px;
+}
+.slider-arrow-prev{
+	left: 15px;
+}
+.slick-dots{
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.slick-dots li button{
+	background-color: transparent;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	transition: all .3s ease-out;
+}
+.slick-dots li button:before{
+	content: "";
+	transition: all .3s ease-out;
+	background-color: #000;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
 }
