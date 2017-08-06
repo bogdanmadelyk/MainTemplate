@@ -1,4 +1,3 @@
-// Main settings
 $('.slider').slick({
 	infinite: true,
 	dots: true,
