@@ -1,0 +1,94 @@
+html{
+	font-size: 16px;
+	line-height: 16px;
+}
+body {
+	font-size: $font-size;
+	line-height: $base-line;
+}
+body {
+	font-family: $default-font;
+	color: $color-text;
+	background-color: $bg-color;
+}
+
+// Links
+a {
+	color: $color-link;
+	text-decoration: none;
+	transition: $default-transition;
+	position: relative;
+	&:hover{
+		color: $color-link-hover;
+	}
+	// Custom cool animation for links
+	&:after{
+		content: '';
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		display: block;
+		width: 0;
+		height: 1px;
+		background-color: $color-link;
+		transition: all .3s cubic-bezier(.175,.885,.32,1.075);
+	}
+	&:hover:after{
+		width: 100%;
+		background-color: $color-link-hover;
+	}
+}
+
+
+// Headings
+h1, h2, h3, h4, h5, h6{
+	font-family: $default-font;
+	color: $color-headings;
+	text-rendering: optimizeLegibility;
+
+}
+h1{
+	font-size: $heading-font-size;
+	line-height: $heading-base-line;
+}
+h2{
+	font-size: $heading-font-size-2;
+	line-height: $heading-base-line-2;
+}
+h3{
+	font-size: $heading-font-size-3;
+	line-height: $heading-base-line-3;
+}
+
+// Lists
+ul{
+	list-style-type: none;
+}
+ul,
+ol {
+	&,
+	& ul,
+	& ol {
+		margin: 0 0 0 0;
+	}
+}
+ol ol li {
+	list-style-type: lower-alpha;
+}
+ol ol ol li {
+	list-style-type: lower-roman;
+}
+nav{
+	& ul,
+	& ol{
+		margin: 0;
+		list-style: none;
+		& ul,
+		& ol{
+			margin-left: $base-line;
+		}
+	}
+}
+
+

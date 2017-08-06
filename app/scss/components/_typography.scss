@@ -41,30 +41,13 @@ h3{
 }
 
 // Lists
-ul,
-ol {
-	&,
-	& ul,
-	& ol {
-		margin: 0 0 0 $base-line;
-	}
-}
 ol ol li {
 	list-style-type: lower-alpha;
 }
 ol ol ol li {
 	list-style-type: lower-roman;
 }
-nav{
-	& ul,
-	& ol{
-		margin: 0;
-		list-style: none;
-		& ul,
-		& ol{
-			margin-left: $base-line;
-		}
-	}
+ul{
+	list-style-type: none;
 }
-
 
