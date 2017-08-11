@@ -9,7 +9,7 @@ $('.burger-menu').on('click', function() {
 	}
 });
 $('.navbar__icon').on('click', function(){
-	$('.navbar__mobile-block').toggleClass('active');
+	$('.navbar__menu').toggleClass('active');
 });
 
 // Script for fixed navbar

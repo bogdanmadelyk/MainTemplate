@@ -1,14 +1,3 @@
-@import "base/reset";
-@import "_mixins/mixins";
-@import "base/fonts";
-@import "base/libs";
-@import "base/vars";
-@import "base/typography";
-@import "base/base";
-
-body{
-	height: 2000px;
-}
 .burger-menu__line {
 	display: block;
 	height: 2px;
@@ -124,9 +113,14 @@ body{
 	justify-content: space-between;
 	align-items: center;
 }
-.navbar__mobile-block{
+.navbar__menu{
 	transition: $default-transition;
 	background-color: transparent;
+	&:after{
+		clear: both;
+		content: "";
+		display: table;
+	}
 	@include r(991){
 		position: fixed;
 		height: 100%;
@@ -141,15 +135,6 @@ body{
 		background: #000;
 		overflow-y: auto;
 		z-index: 101;
-	}
-}
-.navbar__menu{
-	transition: $default-transition;
-	background-color: transparent;
-	&:after{
-		clear: both;
-		content: "";
-		display: table;
 	}
 }
 .navbar-menu__item{

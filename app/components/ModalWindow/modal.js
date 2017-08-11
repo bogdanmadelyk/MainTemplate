@@ -1,12 +1,10 @@
-$(function(){
-
-
 // INLINE TYPE
 $('.open-popup-link').magnificPopup({
 	removalDelay: 300, // Delay before popup is removed
 	mainClass: "mfp-zoom-in", // Zoom animation
 	type:'inline',
 });
+
 // GALERY POPUP
 $('.gallery').each(function() {
 	$(this).magnificPopup({
@@ -18,5 +16,4 @@ $('.gallery').each(function() {
 		removalDelay: 300, // Delay before popup is removed 
 		mainClass: 'mfp-fade', // Fade animation
 	});
-});
 });

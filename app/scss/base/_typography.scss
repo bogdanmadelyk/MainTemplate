@@ -1,6 +1,6 @@
 html{
-	font-size: 14px;
-	line-height: 14px;
+	font-size: 16px;
+	line-height: 16px;
 }
 body {
 	font-size: $font-size;
@@ -11,14 +11,36 @@ body {
 	color: $color-text;
 	background-color: $bg-color;
 }
-
 // Links
 a {
 	color: $color-link;
+	text-decoration: none;
+	transition: $default-transition;
+	position: relative;
+	&:hover{
+		color: $color-link-hover;
+	}
+	// Custom cool animation for links
+	&.underline{
+		&:after{
+			content: '';
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			bottom: -1px;
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color: $color-link;
+			transition: all .3s cubic-bezier(.175,.885,.32,1.075);
+		}
+		&:hover:after{
+			width: 100%;
+			background-color: $color-link-hover;
+		}
+	}
 }
-a:hover {
-	color: $color-link-hover;
-}
+
 
 // Headings
 h1, h2, h3, h4, h5, h6{
@@ -41,6 +63,9 @@ h3{
 }
 
 // Lists
+ul{
+	list-style-type: none;
+}
 ul,
 ol {
 	&,
