@@ -1,10 +1,10 @@
 .burger-menu__line {
 	display: block;
-	height: 2px;
-	width: 20px;
+	height: 3px;
+	width: 30px;
 	background: white;
-	border-radius: 1px;
-	margin-bottom: 3px;
+	border-radius: 5px;
+	margin-bottom: 6px;
 	&:last-child{
 		margin-bottom: 0;
 	}
@@ -51,7 +51,7 @@
 		transform: rotate(0deg) translateY(20px);
 	}
 	100% {
-		transform: translateY(5px) rotate(45deg);
+		transform: translateY(9px) rotate(45deg);
 	}
 }
 @keyframes menu-top-reverse {
@@ -73,7 +73,7 @@
 		transform: rotate(0deg) translateY(-19px);
 	}
 	100% {
-		transform: translateY(-5px) rotate(-45deg);
+		transform: translateY(-9px) rotate(-45deg);
 	}
 }
 @keyframes menu-bottom-reverse {
@@ -93,6 +93,9 @@
 	font-size: 3rem;
 	line-height: 3.5rem;
 	color: #fff;
+	&.active{
+		z-index: 102;
+	}
 }
 .navbar{
 	background-color: #000;
@@ -108,34 +111,42 @@
 		background-color: rgba(0, 0, 0, .9);
 	}
 }
-.navbar-container{
+.navbar__container{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 .navbar__menu{
-	transition: $default-transition;
-	background-color: transparent;
 	&:after{
 		clear: both;
 		content: "";
 		display: table;
 	}
+}
+.navbar__menu-responsive{
+	transition: $default-transition;
+	background-color: transparent;
 	@include r(991){
 		position: fixed;
 		height: 100%;
 		top: 0;
 		left: 0;
 		bottom: 0;
-		transform: translateX(-250px);
-		width: 250px;
+		transform: translateY(-100%);
+		width: 100%;
 	}
 	&.active{
-		transform: translateX(0);
-		background: #000;
+		transform: translateY(0);
+		background: rgba(0, 0, 0, .7);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		overflow-y: auto;
 		z-index: 101;
 	}
+}
+.navbar__icon.active{
+	z-index: 102;
 }
 .navbar-menu__item{
 	float: left;
@@ -144,20 +155,23 @@
 		width: 100%;
 		text-align: center;
 		padding: 0;
+		margin: 20px 0;
 	}
 }
 .navbar-menu__link{
 	font-family: $os-light;
 	color: #fff;
 	transition: $default-transition;
-	padding: 10px 20px;
+	padding: 5px 0;
+	margin: 0 20px;
 	font-size: 1.5rem;
-	display: block;
 	&:hover{
-		background-color: #fff;
-		color: #000;
+		color: $color-link-hover;
 	}
 	@include r(991){
-		padding: 15px 0;
+		font-size: 2rem;
+		&:after{
+			height: 2px;
+		}
 	}
 }

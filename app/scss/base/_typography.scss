@@ -30,8 +30,8 @@ a {
 		display: block;
 		width: 0;
 		height: 1px;
-		background-color: $color-link;
-		transition: all .3s cubic-bezier(.175,.885,.32,1.075);
+		background-color: $color-link-hover;
+		transition: all .6s cubic-bezier(.175,.885,.32,1.075);
 	}
 	&:hover:after{
 		width: 100%;

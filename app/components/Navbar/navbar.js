@@ -9,7 +9,9 @@ $('.burger-menu').on('click', function() {
 	}
 });
 $('.navbar__icon').on('click', function(){
-	$('.navbar__menu').toggleClass('active');
+	$('.navbar__menu-responsive').toggleClass('active');
+	$('.navbar__icon').toggleClass('active');
+	$('.navbar__logo').toggleClass('ative');
 });
 
 // Script for fixed navbar
