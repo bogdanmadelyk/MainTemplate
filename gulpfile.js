@@ -38,6 +38,9 @@ gulp.task('js', ['common-js'], function() {
         // SLIDER
         'app/libs/slick-carousel/slick/slick.min.js',
         'app/libs/bxslider-4/dist/vendor/jquery.easing.1.3.js',
+
+        // WAYPOINTS(for animate.css)
+        'app/libs/waypoints/lib/jquery.waypoints.js',
         
         'app/js/common.min.js',
         ])
