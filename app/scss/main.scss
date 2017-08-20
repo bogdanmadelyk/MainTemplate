@@ -1,11 +1,5 @@
-@import "base/reset";
 @import "_mixins/mixins";
-@import "base/fonts";
-@import "base/libs";
-@import "base/vars";
-@import "base/typography";
+@import "bootstrap";
 @import "base/base";
 
-body{
-	text-align: center;
-}
+

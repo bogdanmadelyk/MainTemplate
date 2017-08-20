@@ -1,51 +1,22 @@
 // Fonts
-$os-regular: "OpenSans-Regular", sans-serif;
-$os-bold: "OpenSans-Bold", sans-serif;
-$os-light: "OpenSans-Light", sans-serif;
-$os-extrabold: "OpenSans-ExtraBold", sans-serif;
+$r-regular: "RobotoRegular", sans-serif;
 
-$default-font: $os-regular;
-
-// Sizes
-$base-line: 1.4rem;
-$font-size: 1rem;
-$heading-font-size: 3rem;
-$heading-base-line: 3.5rem;
-$heading-font-size-2: 2.5rem;
-$heading-base-line-2: 3rem;
-$heading-font-size-3: 2rem;
-$heading-base-line-3: 2.5rem;
-
-// Colors
-$color-text: rgba(0, 0, 0, .5);
-$color-headings: rgba(0, 0, 0, .5);
-$bg-color: #fff;
-$color-link: rgba(0, 0, 0, .5);
-$color-link-hover: rgba(0, 0, 0, .9);
-$input-color: rgba(0, 0, 0, .5);
-$input-color-focus: rgba(0, 0, 0, 1);
+$default-font: $r-regular;
 
 // Sizes
 $base-line: 1rem;
 $font-size: 1rem;
-$heading-font-size: 3rem;
-$heading-base-line: 3rem;
-$heading-font-size-2: 2.5rem;
-$heading-base-line-2: 2.5rem;
-$heading-font-size-3: 2rem;
-$heading-base-line-3: 2rem;
 
 // Colors
-$color-text: #000;
-$color-headings: #000;
-$bg-color: #fff;
-$color-link: #000;
-$color-link-hover: #fff;
-$input-color: #000;
-$inout-color-focus: #000;
+$dark: #414042;
+$blue: #4bcaff;
+$green: #91c46b;
+$orange: #fd7c00;
 
-// Forms
-$input-border-radius: 0px;
+$br: 8px;
+$placeholder: #d3d3d3;
+
+
 
 
 $default-transition: all .3s ease-out;

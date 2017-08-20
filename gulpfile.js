@@ -41,8 +41,9 @@ gulp.task('js', ['common-js'], function() {
 
         // WAYPOINTS(for animate.css)
         'app/libs/waypoints/lib/jquery.waypoints.js',
+        'app/js/animate.js',
         
-        'app/js/common.min.js',
+        'app/js/common.min.js'
         ])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())

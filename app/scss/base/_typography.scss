@@ -1,24 +1,30 @@
 html{
-	font-size: 16px;
-	line-height: 16px;
+	font-size: 13px;
+	line-height: 13px;
+	overflow-x: hidden;
+	height: 100%;
 }
 body {
 	font-size: $font-size;
 	line-height: $base-line;
+	min-width: 300px;
+	position: relative;
+	opacity: 1;
+	height: 100%;
 }
 body {
 	font-family: $default-font;
-	color: $color-text;
-	background-color: $bg-color;
+	color: #fff;
+	background-color: $dark;
 }
 // Links
 a {
-	color: $color-link;
+	color: $dark;
 	text-decoration: none;
 	transition: $default-transition;
 	position: relative;
 	&:hover{
-		color: $color-link-hover;
+		color: $blue;
 	}
 	// Custom cool animation for links
 	&.underline{
@@ -31,37 +37,23 @@ a {
 			display: block;
 			width: 0;
 			height: 1px;
-			background-color: $color-link;
+			background-color: $dark;
 			transition: all .3s cubic-bezier(.175,.885,.32,1.075);
 		}
 		&:hover:after{
 			width: 100%;
-			background-color: $color-link-hover;
+			background-color: $blue;
 		}
 	}
 }
-
-
-// Headings
-h1, h2, h3, h4, h5, h6{
-	font-family: $default-font;
-	color: $color-headings;
-	text-rendering: optimizeLegibility;
-
-}
 h1{
-	font-size: $heading-font-size;
-	line-height: $heading-base-line;
+	font-size: 3rem;
+	line-height: 3rem;
 }
-h2{
-	font-size: $heading-font-size-2;
-	line-height: $heading-base-line-2;
+h2,h3{
+	font-size: 2rem;
+	line-height: 2rem;
 }
-h3{
-	font-size: $heading-font-size-3;
-	line-height: $heading-base-line-3;
-}
-
 // Lists
 ul{
 	list-style-type: none;
@@ -92,4 +84,69 @@ nav{
 	}
 }
 
-
+// FORMS
+textarea{
+	resize: none;
+}
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1rem;
+	margin: 0;
+	font-family: $default-font;
+	outline: none;
+	vertical-align: top;
+	background-color: #fff;
+	color: $dark;
+	transition: $default-transition;
+	border-radius: $br;
+	border: none;
+	&::-webkit-input-placeholder{ 
+	  color: $placeholder;
+	}
+	&::-moz-placeholder{ 
+	  color: $placeholder;
+	}
+	&:-ms-input-placeholder{ 
+	  color: $placeholder;
+	}
+	&:-moz-placeholder{
+	  color: $placeholder;
+	}
+}
+// States
+input,
+textarea,
+select {
+    &:focus {
+    	outline: none;
+    	color: $dark;
+    	border: 1px solid $dark;
+    }
+    &:disabled,
+    &.disabled {
+    	resize: none;
+    	cursor: default;
+    	font-style: italic;
+	}
+}
+input[type="file"] {
+    width: auto;
+    border: none;
+    padding: 0;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+}
