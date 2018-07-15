@@ -1,82 +1,89 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
   font: inherit;
-  vertical-align: baseline; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-q {
-  &:before, &:after {
-    content: '';
-    content: none; } }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-  
-html {
-	box-sizing: border-box;
+  margin: 0;
 }
-*,
-*:before,
-*:after {
-	box-sizing: inherit;
+select {
+  text-transform: none;
+}
+input {
+  line-height: normal;
+  -webkit-appearance: none;
+  &[type="reset"],
+  &[type="submit"],
+  html &[type="button"]{
+    -webkit-appearance: none;
+    cursor: pointer;
+  }
+  &[type="radio"],
+  &[type="checkbox"]{
+    box-sizing: border-box;
+    padding: 0;
+  }
+  &[type="number"] {
+    appearance: none !important;
+    -moz-appearance:textfield;
+    -webkit-appearance: none !important;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      display: none !important;
+    }
+  }
+  &[type="search"] {
+    -webkit-appearance: none;
+  }
+  &[type="search"] {
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+  &[disabled] {
+    cursor: default;
+  }
+	&[type=password]::-ms-reveal,
+	&[type=password]::-ms-clear
+	{
+	  display: none !important;
+	}
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+textarea {
+  -webkit-appearance: none;
+}
+button {
+  overflow: visible;
+  -webkit-appearance: none;
+  cursor: pointer;
+  text-transform: none;
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  &[disabled] {
+    cursor: default;
+  }
 }
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    -webkit-overflow-scrolling: touch;
+  outline:none !important;
 }
-img,
-video,
-audio {
-    max-width: 100%;
-}
-img,
-video {
-	height: auto;
-}
-svg {
-    max-height: 100%;
-}
-iframe {
-    border: none;
-}
-::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-input[type="radio"],
-input[type="checkbox"] {
-    vertical-align: middle;
-    position: relative;
-    bottom: 0.15rem;
-    font-size: 115%;
-    margin-right: 3px;
-}
-input[type="search"] {
-	-webkit-appearance: textfield;
-}
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button {
-	-webkit-appearance: none;
+
+
+.clearfix{
+  &:before,
+  &:after{
+      content: " ";
+      display: table;
+  }
+  &:after{
+  clear: both;
+  }
 }

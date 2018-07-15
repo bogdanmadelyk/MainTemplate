@@ -1,5 +1,6 @@
-@import "bootstrap";
-@import "app/libs/Magnific-Popup-master/dist/magnific-popup";
-@import "app/libs/slick-carousel/slick/slick.scss";
-@import "app/libs/slick-carousel/slick/slick-theme.scss";
+//http://dimsemenov.com/plugins/magnific-popup/
+@import "libs/_popup.scss";
+
+//http://kenwheeler.github.io/slick/
+@import "libs/_slick.scss";
 

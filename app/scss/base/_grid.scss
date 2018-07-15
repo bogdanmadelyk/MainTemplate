@@ -1,0 +1,32 @@
+
+.hide {
+    display: none !important;
+}
+.container {
+    max-width: $grid-width;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: $grid-gutter/2;
+    padding-right: $grid-gutter/2;
+}
+.row {
+    @include clearfix;
+    @include make-grid-columns-persent(12,0);
+    margin-left: -$grid-gutter/2;
+    margin-right: -$grid-gutter/2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    &:before,
+    &:after {
+        display: none !important;
+    }
+    [class*="col"]{
+        padding-left: $grid-gutter/2;
+        padding-right: $grid-gutter/2;
+    }
+}
+

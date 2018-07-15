@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WebDesign Master",
+  "author": "Bogdan",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12",
@@ -31,6 +31,7 @@
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "^4.0.0-alpha.6",
+    "gulp-pug": "^3.3.0"
   }
 }

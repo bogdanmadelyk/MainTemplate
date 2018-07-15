@@ -1,0 +1,7 @@
+mixin breadcrumbs(arr,cur)
+    .b-breadcrumbs
+        .container
+            each v in arr
+                a(href="#").b-breadcrumbs__link=v
+            if cur!=''
+                span.b-breadcrumbs__text=cur

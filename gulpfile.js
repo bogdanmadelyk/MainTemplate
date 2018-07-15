@@ -9,43 +9,25 @@ var gulp           = require('gulp'),
     imagemin       = require('gulp-imagemin'),
     cache          = require('gulp-cache'),
     plumber        = require('gulp-plumber'),
-    autoprefixer   = require('gulp-autoprefixer');
+    autoprefixer   = require('gulp-autoprefixer'),
+    pug            = require('gulp-pug'),
+    notify         = require("gulp-notify");
 
 // Скрипты проекта
-
-gulp.task('common-js', function() {
-    return gulp.src([
-        'app/js/common.js',
-        ])
-    .pipe(plumber())
-    .on('error', function(err) {
-        gutil.log(err);
-        this.emit('end');
-    })
-    .pipe(concat('common.min.js'))
-    // .pipe(uglify())
-    .pipe(gulp.dest('app/js'));
-
+gulp.task('pug', function() {
+    return gulp.src('app/pug/pages/*.pug')
+        .pipe(plumber())
+        .pipe(pug({
+            pretty: true
+        }))
+        .on("error", notify.onError(function(error) {
+            return "Message to the notifier: " + error.message;
+        }))
+        .pipe(gulp.dest('app'));
 });
-
-gulp.task('js', ['common-js'], function() {
-    return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
-
-        // MODAL WINDOW
-        'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
-
-        // SLIDER
-        'app/libs/slick-carousel/slick/slick.min.js',
-        'app/libs/bxslider-4/dist/vendor/jquery.easing.1.3.js',
-
-        // WAYPOINTS(for animate.css)
-        'app/libs/waypoints/lib/jquery.waypoints.js',
-        'app/js/animate.js',
-        
-        'app/js/common.min.js'
-        ])
-    .pipe(concat('scripts.min.js'))
+gulp.task('js', function() {
+    return gulp.src(['app/js/vendor/*.js'])
+    .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({stream: true}));
@@ -63,7 +45,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compact'}))
     .on('error', function(err) {
         gutil.log(err);
         this.emit('end');
@@ -74,8 +56,9 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['sass', 'js', 'browser-sync', 'pug'], function() {
     gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/pug/**/*.pug', ['pug']);
     gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
     gulp.watch('app/*.html', browserSync.reload);
 });
@@ -101,10 +84,17 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
         'app/js/scripts.min.js',
         ]).pipe(gulp.dest('dist/js'));
 
+    var buildHtml = gulp.src('app/*.html')
+        .pipe(gulp.dest('dist/'));
+
+    var buildCommonJs = gulp.src([
+        'app/js/main.js',
+
+    ]).pipe(gulp.dest('dist/js'));
+
     var buildFonts = gulp.src([
         'app/fonts/**/*',
         ]).pipe(gulp.dest('dist/fonts'));
-
 });
 
 

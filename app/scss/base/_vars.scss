@@ -1,23 +1,25 @@
 // Fonts
-$r-regular: "RobotoRegular", sans-serif;
+$os-regular: "OpenSans-Regular", sans-serif;
+$os-bold: "OpenSans-Bold", sans-serif;
+$os-light: "OpenSans-Light", sans-serif;
 
-$default-font: $r-regular;
+$default-font: $os-regular;
 
 // Sizes
-$base-line: 1rem;
 $font-size: 1rem;
 
 // Colors
-$dark: #414042;
-$blue: #4bcaff;
-$green: #91c46b;
-$orange: #fd7c00;
+$color-main: #000;
+$bg-color: #fff;
 
-$br: 8px;
-$placeholder: #d3d3d3;
+// Grid
+$width_lg: 1169px;
+$width_md: 1024px;
+$width_xs: 767px;
 
-
-
+$grid-width:1160px;
+$grid-gutter:40px;
+$grid-columns:12;
 
 $default-transition: all .3s ease-out;
 $long-transition: all 1s ease-out;
