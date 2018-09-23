@@ -1,7 +1,5 @@
 // Fonts
 $os-regular: "OpenSans-Regular", sans-serif;
-$os-bold: "OpenSans-Bold", sans-serif;
-$os-light: "OpenSans-Light", sans-serif;
 
 $default-font: $os-regular;
 
@@ -17,9 +15,9 @@ $width_lg: 1169px;
 $width_md: 1024px;
 $width_xs: 767px;
 
-$grid-width:1160px;
-$grid-gutter:40px;
-$grid-columns:12;
+$grid-width: 1200px;
+$grid-gutter: 40px;
+$grid-columns: 12;
 
-$default-transition: all .3s ease-out;
+$default-transition: all 0.3s ease-out;
 $long-transition: all 1s ease-out;
