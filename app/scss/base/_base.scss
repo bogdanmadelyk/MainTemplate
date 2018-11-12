@@ -4,8 +4,10 @@ html, body{
 }
 html{
 	font-size: 15px;
+	line-height: 1.5;
 	font-family: $default-font;
 	background-color: $bg-color;
+	color: $text-color;
 }
 body{
 	min-width: 300px;
@@ -16,7 +18,7 @@ body{
 }
 //Selection
 *::selection{
-	background-color: $color-main;
+	background-color: $main-color;
 	color: #fff;
 }
 /*

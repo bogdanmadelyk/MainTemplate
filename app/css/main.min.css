@@ -294,7 +294,7 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 */
 html, body { overflow-x: hidden; min-height: 100%; }
 
-html { font-size: 15px; font-family: "OpenSans-Regular", sans-serif; background-color: #fff; }
+html { font-size: 15px; line-height: 1.5; font-family: "OpenSans-Regular", sans-serif; background-color: #fff; color: #000; }
 
 body { min-width: 300px; position: relative; }
 
